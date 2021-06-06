@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="/assets/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Texturina&display=swap" rel="stylesheet">
+    <style>
+        .parallax {
+            background-image: url("https://i.imgur.com/nO0n3j1.jpg");
+            min-height: 800px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: lime;
+            margin-top: -10px
+        }
+
+        body {
+            font-family: 'Tenor Sans', helvetica, sans-serif, serif;
+            margin: 0 auto;
+            max-width: 600px;
+            background: #232323;
+        }
+
+        div {
+            height: 200px;
+            background-size: cover;
+            position: relative;
+            margin: 40px 60px;
+        }
+
+        header {
+            font-family: 'Texturina', serif;
+            text-align: center;
+            color: white;
+            background-color: rgba(255, 165, 0, .5);
+        }
+
+        h1 {
+            font-size: 85px;
+            margin: -30px 0 0 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin: 0px 0 80px 0;
+        }
+
+        h4 {
+            font-size: 30px;
+            margin: -70px 0 0px 0;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 1);
+            background: black;
+            background: linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            padding: 5 10;
+            line-height: 28px;
+            text-align: left;
+            position: absolute;
+            bottom: 0;
+            border: solid orange 1px;
+            margin: 0 40;
+            height: 30px;
+            transition: height .5s;
+            -webkit-transition: height .5s;
+            -moz-transition: height .5s;
+        }
+
+        small {
+            opacity: 0;
+        }
+
+        .show-description p {
+            height: 100px;
+            float: left;
+            font-size: 16px;
+        }
+
+        .show-description small {
+            opacity: 1;
+        }
+
+        .sardine {
+            background-image: url("https://i.imgur.com/PowWLBG.jpg");
+        }
+
+        .salmon {
+            background-image: url("https://i.imgur.com/IGF6p8D.jpg");
+        }
+
+        .herring {
+            background-image: url("https://i.imgur.com/BZoFIbI.jpg");
+        }
+
+        .price {
+            float: right;
+            border: solid yellow 3px;
+            padding: 10;
+            background-color: orange;
+        }
+
+        @media (max-width: 500px) {
+
+            h1 {
+                font-size: 60px;
+                margin-top: 30px;
+                line-height: 40px;
+            }
+
+            h2 {
+                font-size: 30px;
+                margin: 20px 0 30px 0;
+            }
+
+            h4 {
+                font-size: 25px;
+                margin: -30px 0 30px 0;
+            }
+
+            div {
+                height: 150px;
+                margin: 40px 10px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0;
+            }
+
+            small {
+                font-size: 16px;
+            }
+
+            header {
+                margin: -25px 0 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="parallax">
+        <header>
+            <h1>Gill's Grill</h1>
+            <h2>A Seafood Joint</h2>
+            <h4>Philadelphia, PA</h4>
+        </header>
+        <div class="sardine">
+            <p>Sesame Sardines <span class="price">$18</span><br />
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit optio </small>
+            </p>
+        </div>
+
+        <div class="salmon">
+            <p>Citrus Salmon <span class="price">$28</span><br />
+                <small>Veritatis obcaecati delectus ipsum ratione aperiam labore
+                    quod</small>
+            </p>
+        </div>
+
+        <div class="herring">
+            <p>Habanero Herring <span class="price">$22</span><br />
+                <small>Pariatur dolor voluptates ex atque officia sapiente earum id eligendi</small>
+            </p>
+        </div>
+
+    </section>
+
+    <script>
+        $('div').on('click', function () {
+            $(this).toggleClass('show-description');
+        });
+    </script>
+
+</body>
